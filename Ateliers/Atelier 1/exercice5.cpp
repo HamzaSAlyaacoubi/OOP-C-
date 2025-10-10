@@ -36,19 +36,6 @@ int &trouverMax(int *arr, int n)
     return *max;
 }
 
-int &trouverMaxChatGPT(int *arr, int n)
-{
-    int *pmax = arr; // pointeur vers le max actuel
-
-    for (int i = 1; i < n; i++)
-    {
-        if (*(arr + i) > *pmax)
-            pmax = arr + i; // pmax pointe vers le nouvel élément max
-    }
-
-    return *pmax; // on retourne une référence vers cet élément
-}
-
 void inverser(const int *arr, int n)
 {
     int arrInverse[n];

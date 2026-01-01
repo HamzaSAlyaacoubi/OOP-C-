@@ -155,7 +155,7 @@ public:
     void Draw(float xPos, float yPos)
     {
         float lineWidth = width / 2;
-        float lineHeight = height / 100;
+        float lineHeight = height / 50;
         Rectangle horRoad = {xPos, yPos, width, height};
         DrawRectangleRec(horRoad, DARKGRAY);
         Rectangle horRoadLine = {xPos + (width / 4), yPos + (height / 2) - (lineHeight / 2), lineWidth, lineHeight};
@@ -242,8 +242,8 @@ public:
         DrawRing(center, innerRadius, outerRadius, startAngle, endAngle, segments, DARKGRAY);
 
         // DRAWING THE LINES
-        float lineInnerRadius = outerRadius - width / 2 - width / 200;
-        float lineOuterRadius = outerRadius - width / 2 + width / 200;
+        float lineInnerRadius = outerRadius - width / 2 - width / 100;
+        float lineOuterRadius = outerRadius - width / 2 + width / 100;
 
         float lineStartAngle = startAngle + 7.5;
         float lineEndAngle = lineStartAngle + 15;
@@ -412,7 +412,7 @@ public:
         Vector2 up = {0.0f, -1.0f};
         Vector2 down = {0.0f, 1.0f};
 
-        if (light.getState() != 0)
+        if (light.getState() != 5)
         {
             // Move the car
             carBody.x += dir.x * moveSpeed * dt;
